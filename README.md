@@ -1,5 +1,5 @@
 # e-manager
-##to manage your own imformation
+**to manage your own imformation**
 
 - by pywin32
 - by pillow
@@ -7,7 +7,7 @@
 - by tkinter
 - by py 3.10.5
 
-###!!=======!!=======!!
+**!!=======!!=======!!**
 - if you want to clean up the "userinfo.json"
 - to make the program run correctely
 - after cleaning
