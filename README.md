@@ -1,15 +1,15 @@
 # e-manager
 to manage your own imformation
 
-by pywin32
-by pillow
-by json
-by tkinter
-by py 3.10.5
-
-!!=======!!=======!!
-if you want to clean up the "userinfo.json"
-to make the program run correctely
-after cleaning
-input "{}" (yes, empty
-and save :)
+\n by pywin32
+\n by pillow
+\n by json
+\n by tkinter
+\n by py 3.10.5
+\n
+\n !!=======!!=======!!
+\n if you want to clean up the "userinfo.json"
+\n to make the program run correctely
+\n after cleaning
+\n input "{}" (yes, empty
+\n and save :)
