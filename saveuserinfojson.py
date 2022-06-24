@@ -24,7 +24,7 @@ def saveinfo(username, password):
 
     with open("userinfo.json", "w") as f:
         if firsttimes:
-            json.dump({"user{0}".format(username):{"username":username, "password":dealpassword, "type":thistype}}, fp=f, indent=4)
+            json.dump({"user{0}".format(username):{"password":dealpassword, "type":thistype}}, fp=f, indent=4)
         else:
-            jsons["user{0}".format(username)] = {"username":username, "password":dealpassword, "type":thistype}
+            jsons["user{0}".format(username)] = {"password":dealpassword, "type":thistype}
             json.dump(jsons, fp=f, indent=4)

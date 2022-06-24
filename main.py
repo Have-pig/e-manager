@@ -3,6 +3,7 @@ from win32api import GetSystemMetrics
 import dealbgpic
 import dealPic
 import createaccount
+from enterd import check
 
 
 def start():
@@ -34,7 +35,7 @@ def start():
     in_name.place(x=int(width*0.442), y=int(height*0.41))
     in_word.place(x=int(width*0.442), y=int(height*0.519))
 
-    enterd = tk.Button(entrance, text="    Go!    ", bg="white", fg="red", relief='flat')
+    enterd = tk.Button(entrance, text="    Go!    ", bg="white", fg="red", relief='flat', command=lambda:check(entrance, width, height, in_name.get(), in_word.get()))
     signup = tk.Button(entrance, text="A new account?", bg="white", fg="red", relief='flat', command=lambda:createaccount.create(entrance))
 
     enterd.place(x=int(width*0.618), y=int(height*0.615))
