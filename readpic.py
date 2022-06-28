@@ -1,7 +1,7 @@
-import os
+from os import listdir
 
 def piclist():
-    filelist = os.listdir('picture')
+    filelist = listdir('picture')
     
     r = []
     for i in filelist:

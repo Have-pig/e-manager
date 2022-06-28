@@ -9,6 +9,7 @@ def warn(win, x, y):
     warnword.place(x=int(x*0.442), y=int(y*0.565))
 
 def check(win, x, y, username, password):
+    isTrue = False
     with open("userinfo.json", "r") as f:
         jsons = json.load(f)
         try:
@@ -17,12 +18,14 @@ def check(win, x, y, username, password):
             if types == 0:
                 dealpassword = hbdalfhb665g.adadasdg(password)
             elif types == 1:
-                dealpassword = hbdalfhb665g.oiuyfyiohiu(password)
+                    dealpassword = hbdalfhb665g.oiuyfyiohiu(password)
             else:
                 dealpassword = hbdalfhb665g.aouifvafa(password)
-            if dealpassword == jsons["passwrod"]:
-                mainusegui.use(win, x, y)
+            if dealpassword == userinfo["password"]:
+                isTrue = True
             else:
                 warn(win, x, y)
         except:
-            warn(win, x, y)  
+            warn(win, x, y)
+    if isTrue:
+        mainusegui.use(win, x, y)

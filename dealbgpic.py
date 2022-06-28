@@ -1,7 +1,7 @@
 from PIL import Image
 import readpic
 from random import randint
-import os
+from os import getcwd
 
 
 def getimage(winW, winH):
@@ -29,7 +29,7 @@ def getimage(winW, winH):
 
     dealimage = useimage.resize((winW, winH), box=box)
     
-    filepath = os.getcwd()+"\\bgused.png"
+    filepath = getcwd()+"\\bgused.png"
     dealimage.save(filepath)
 
     return filepath
