@@ -1,0 +1,12 @@
+<test name = "xml test,1">
+    <head testimf = "sure 2">
+        this is a test of xml
+    </head>
+    en,yep
+    <body name = "2333">
+        a body
+        <next>
+            three times!
+        </netxt>
+    </body>
+</test>
