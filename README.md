@@ -6,7 +6,7 @@
 - by json
 - by tkinter
 - by py 3.10.5
-- by time
+- by datetime
 
 **!!=======!!=======!!**
 - if you want to clean up the "userinfo.json"
