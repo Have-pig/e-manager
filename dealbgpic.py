@@ -29,7 +29,7 @@ def getimage(winW, winH):
 
     dealimage = useimage.resize((winW, winH), box=box)
     
-    filepath = getcwd()+"\\bgused.png"
+    filepath = getcwd()+"\\used\\bgused.png"
     dealimage.save(filepath)
 
     return filepath

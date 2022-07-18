@@ -18,7 +18,7 @@ def check(win, x, y, username, password):
             if types == 0:
                 dealpassword = hbdalfhb665g.adadasdg(password)
             elif types == 1:
-                    dealpassword = hbdalfhb665g.oiuyfyiohiu(password)
+                dealpassword = hbdalfhb665g.oiuyfyiohiu(password)
             else:
                 dealpassword = hbdalfhb665g.aouifvafa(password)
             if dealpassword == userinfo["password"]:

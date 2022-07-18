@@ -10,7 +10,7 @@ def getPic(winH, files):
     box = (0, 0, 1620, 1080)
     dealpic = useimage.resize(purposesize, box=box)
     name = files[:-4]
-    filepath = getcwd()+"\\"+name+"used.png"
+    filepath = getcwd()+"\\used\\"+name+"used.png"
     dealpic.save(filepath)
 
     return filepath

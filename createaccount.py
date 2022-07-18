@@ -44,16 +44,16 @@ def create(win):
     realW = int(realH/2*3)
     newscreen.geometry("{0}x{1}".format(realW, realH))
     newscreen.resizable(False, False)
-    newscreen.iconphoto(False, tk.PhotoImage(file='newicon.png'))
+    newscreen.iconphoto(False, tk.PhotoImage(file='gui\\newicon.png'))
     
     canvasn = tk.Canvas(newscreen, width=realW, height=realH)
 
-    newaccpicfilepath = dealPic.getPic(height, "newacc.png")
+    newaccpicfilepath = dealPic.getPic(height, "gui\\newacc.png")
     pic = tk.PhotoImage(file=newaccpicfilepath)
     canvasn.create_image(0,0, anchor="nw", image=pic)
 
     canvasn.pack()
-    
+
     in_name = tk.Entry(newscreen, bg="white", fg="blue", width=int(height/16.4))
     in_word = tk.Entry(newscreen, bg="white", show="*", fg="blue", width=int(height/16.4))
     in_word2 = tk.Entry(newscreen, bg="white", show="*", fg="blue", width=int(height/16.4))

@@ -1,0 +1,2 @@
+domaintype = None
+hellos = False

@@ -15,14 +15,14 @@ def start():
     entrance.resizable(False, False)
 
     entrance.geometry("{0}x{1}".format(width, height))
-    entrance.iconphoto(True, tk.PhotoImage(file='icon.png'))
+    entrance.iconphoto(True, tk.PhotoImage(file='gui\\icon.png'))
 
     bgfile = dealbgpic.getimage(width, height)
     canvasn = tk.Canvas(entrance, bg='white', height=height, width=width)
     images = tk.PhotoImage(file=bgfile)
     canvasn.create_image(0,0, anchor='nw', image=images)
 
-    loginpath = dealPic.getPic(height, "LogIn.png")
+    loginpath = dealPic.getPic(height, "gui\\LogIn.png")
     logpic = tk.PhotoImage(file=loginpath)
     logx = int(width*0.5)
     logy = int(height*0.5)
@@ -42,5 +42,3 @@ def start():
     signup.place(x=int(width*0.32), y=int(height*0.615))
 
     entrance.mainloop()
-
-start()
