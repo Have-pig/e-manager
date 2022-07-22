@@ -1,22 +1,19 @@
 import tkinter as tk
 import glovar
-from mainusegui import delhello
-from ACCPASS import delaccpass
-from ACG import delacg
-from TOOL import deltool
+import mainusegui
+import ACCPASS
+import ACG
+import TOOL
 
 
-def setting(win, y):
+def setting(win, y, x):
     if glovar.hellos:
-        delhello
+        mainusegui.canvasn.delete(mainusegui.hello)
     else:
         if glovar.domaintype == "ACG":
-            delacg()
+            pass
         elif glovar.domaintype == "TOOL":
-            deltool()
+            pass
         elif glovar.domaintype == "ACCPASS":
-            delaccpass()
+            pass
 
-
-def delsetting():
-    pass

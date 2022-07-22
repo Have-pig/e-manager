@@ -1,22 +1,21 @@
 import tkinter as tk
 import glovar
-from mainusegui import delhello
-from ACCPASS import delaccpass
-from SETTING import delsetting
-from TOOL import deltool
+import mainusegui
+import ACCPASS 
+import SETTING
+import TOOL
 
 
-def acg(win, y):
+def acg(win, y, x):
     if glovar.hellos:
-        delhello()
+        mainusegui.canvasn.delete(mainusegui.hello)
     else:
         if glovar.domaintype == "ACCPASS":
-            delaccpass()
+            pass
         elif glovar.domaintype == "TOOL":
-            deltool()
+            pass
         elif glovar.domaintype == "SETTING":
-            delsetting()
+            pass
 
-
-def delacg():
-    pass
+    searches = tk.Entry(win, bg="white", width=int((x/25)), bd=1)
+    searches.place(x=int(y*3.5/16), y=int(y*0.0625))

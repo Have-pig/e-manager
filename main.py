@@ -22,15 +22,15 @@ def start():
     images = tk.PhotoImage(file=bgfile)
     canvasn.create_image(0,0, anchor='nw', image=images)
 
-    loginpath = dealPic.getPic(height, "gui\\LogIn.png")
+    loginpath = dealPic.getPic(height, "LogIn.png")
     logpic = tk.PhotoImage(file=loginpath)
     logx = int(width*0.5)
     logy = int(height*0.5)
     canvasn.create_image(logx, logy, anchor='center', image=logpic)
     canvasn.pack()
 
-    in_name = tk.Entry(entrance, bg="white", fg="blue", width=int(width/29))
-    in_word = tk.Entry(entrance, bg="white", show="*", fg="blue", width=int(width/29))
+    in_name = tk.Entry(entrance, bg="white", fg="blue", width=int(width/29), bd=0)
+    in_word = tk.Entry(entrance, bg="white", show="*", fg="blue", width=int(width/29), bd=0)
 
     in_name.place(x=int(width*0.442), y=int(height*0.41))
     in_word.place(x=int(width*0.442), y=int(height*0.519))

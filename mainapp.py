@@ -8,13 +8,14 @@ from ACCPASS import accpass
 
 
 class domain:
-    def __init__(self, win, y, func) -> None:
+    def __init__(self, win, y, x,func) -> None:
         self.win = win
         self.y = y
+        self.x = x
         self.do = func
 
     def next(self, event):
-        self.do(self.win, self.y)
+        self.do(self.win, self.y, self.x)
 
 def dealpic(y, name):
     use = Image.open("gui\\"+name)
@@ -26,7 +27,7 @@ def dealpic(y, name):
 
     return savefile
 
-def next(win, ys):
+def next(win, ys, xs):
     ACG = tk.Canvas(win, width=int(ys*3/16), height=int(ys/8))
     ACCPASS = tk.Canvas(win, width=int(ys*3/16), height=int(ys/8))
     TOOL = tk.Canvas(win, width=int(ys*3/16), height=int(ys/8))
@@ -47,10 +48,10 @@ def next(win, ys):
     TOOL.create_image(0, 0, anchor="nw", image=TOOLpic)
     SETTING.create_image(0, 0, anchor="nw", image=SETTINGpic)
 
-    acgg = domain(win, ys, acg)
-    accpasss = domain(win, ys, accpass)
-    tooll = domain(win, ys, tool)
-    settingg = domain(win, ys, setting)
+    acgg = domain(win, ys, xs, acg)
+    accpasss = domain(win, ys, xs, accpass)
+    tooll = domain(win, ys, xs, tool)
+    settingg = domain(win, ys, xs, setting)
     ACG.bind("<ButtonRelease-1>", acgg.next)
     ACCPASS.bind("<ButtonRelease-1>", accpasss.next)
     TOOL.bind("<ButtonRelease-1>", tooll.next)

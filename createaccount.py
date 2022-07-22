@@ -48,15 +48,15 @@ def create(win):
     
     canvasn = tk.Canvas(newscreen, width=realW, height=realH)
 
-    newaccpicfilepath = dealPic.getPic(height, "gui\\newacc.png")
+    newaccpicfilepath = dealPic.getPic(height, "newacc.png")
     pic = tk.PhotoImage(file=newaccpicfilepath)
     canvasn.create_image(0,0, anchor="nw", image=pic)
 
     canvasn.pack()
 
-    in_name = tk.Entry(newscreen, bg="white", fg="blue", width=int(height/16.4))
-    in_word = tk.Entry(newscreen, bg="white", show="*", fg="blue", width=int(height/16.4))
-    in_word2 = tk.Entry(newscreen, bg="white", show="*", fg="blue", width=int(height/16.4))
+    in_name = tk.Entry(newscreen, bg="white", fg="blue", width=int(height/16.4), bd=0)
+    in_word = tk.Entry(newscreen, bg="white", show="*", fg="blue", width=int(height/16.4), bd=0)
+    in_word2 = tk.Entry(newscreen, bg="white", show="*", fg="blue", width=int(height/16.4), bd=0)
 
     in_name.place(x=int(realW*0.362), y=int(realH*0.254))
     in_word.place(x=int(realW*0.362), y=int(realH*0.465))

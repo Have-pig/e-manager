@@ -57,7 +57,7 @@ def use(win, x, y):
     mainapp.geometry("{0}x{1}".format(x, y))
     mainapp.title("e_manager")
     mainapp.resizable(False, False)
-    mainapp.iconphoto(True, tk.PhotoImage(file="icon.png"))
+    mainapp.iconphoto(True, tk.PhotoImage(file="gui\\icon.png"))
     global canvasn
     canvasn = tk.Canvas(mainapp, bg="white", width=x, height=y)
     bgpath = dealmaingui(x, y)
@@ -72,11 +72,6 @@ def use(win, x, y):
     canvasn.create_image(int(y/16*0.45), int(y/16*0.45), anchor="nw", image=headp)
     canvasn.pack()
     glovar.hellos = True
-    next(mainapp, y)
+    next(mainapp, y, x)
 
     mainapp.mainloop()
-
-# the func that other files` need to use
-
-def delhello():
-    canvasn.delete(hello)
