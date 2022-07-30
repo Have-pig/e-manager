@@ -1,5 +1,4 @@
 import tkinter as tk
-from win32api import GetSystemMetrics
 import dealbgpic
 import dealPic
 import createaccount
@@ -10,8 +9,8 @@ def start():
     entrance = tk.Tk()
     entrance.title("Hello!")
 
-    width = int(int(GetSystemMetrics(0))*0.6)
-    height = int(int(GetSystemMetrics(1))*0.6)
+    width = int(entrance.winfo_screenwidth()*0.6)
+    height = int(entrance.winfo_screenheight()*0.6)
     entrance.resizable(False, False)
 
     entrance.geometry("{0}x{1}".format(width, height))

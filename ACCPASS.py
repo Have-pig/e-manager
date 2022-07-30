@@ -6,15 +6,7 @@ import TOOL
 import SETTING
 from respass import ResetPass
 from delpass import DelPass
-from sys import executable, exit, argv
-from os import execl
-
-
-def cancellation(win):
-    win.destroy()
-
-    execl(executable, executable, *argv)
-    exit()
+from rrreeessstttaaarrrtttt import cancellation
 
 
 def accpass(win, y, x):
@@ -33,7 +25,7 @@ def accpass(win, y, x):
     global DelAccount
     global CancelLation
     ResetPassword = tk.Button(win, text="Reset password", bg="white", bd=1, command=lambda:ResetPass(win, x, y))
-    DelAccount = tk.Button(win, text="Delete account", bg="white",  bd=1, command=DelPass(win, x, y))
+    DelAccount = tk.Button(win, text="Delete account", bg="white",  bd=1, command=lambda:DelPass(win, x, y))
     CancelLation = tk.Button(win, text="Cancellation", bg="white", bd=1, command=lambda:cancellation(win))
 
     ResetPassword.place(x=int(y*3.5/16), y=int(y*0.0325))

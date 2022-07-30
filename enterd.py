@@ -2,6 +2,7 @@ import json
 import hbdalfhb665g
 import mainusegui
 import tkinter as tk
+import glovar
 
 
 def warn(win, x, y):
@@ -28,4 +29,5 @@ def check(win, x, y, username, password):
         except:
             warn(win, x, y)
     if isTrue:
+        glovar.loginacc = username
         mainusegui.use(win, x, y)

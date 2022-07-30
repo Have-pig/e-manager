@@ -2,6 +2,8 @@ import tkinter as tk
 import dealPic
 from win32api import GetSystemMetrics
 import saveuserinfojson
+from rrreeessstttaaarrrtttt import cancellation
+import json
 
 
 def warn(win, x, y):
@@ -20,8 +22,19 @@ def noemptypass(win, x, y):
     warnpass = tk.Label(win, bg="white", text='The "password" shouldn`t be empty', fg="orange")
     warnpass.place(x=int(x*0.37), y=int(y*0.56))
 
+def acchasbeen(win, x, y):
+    warnexistence = tk.Label(win, bg="white", text="The account has been created", fg="orange")
+    warnexistence.place(x=int(x*0.291), y=int(y*0.82))
+
 def checkinfo(win, x, y, username, pass1, pass2):
-    if (pass1==pass2) and (username != "") and (pass1 != ""):
+    with open("userinfo.json") as f:
+        jsons = json.load(f)
+        userlist = jsons.keys()
+        userlist = list(userlist)
+
+    if "user"+username in userlist:
+        acchasbeen(win, x, y)
+    elif (pass1==pass2) and (username != "") and (pass1 != ""):
         saveuserinfojson.saveinfo(username, pass1)
         done(win, x, y)
     elif username == "":
@@ -30,7 +43,6 @@ def checkinfo(win, x, y, username, pass1, pass2):
         noemptypass(win, x, y)
     else:
         warn(win, x, y)
-
 
 def create(win):
 
@@ -44,7 +56,7 @@ def create(win):
     realW = int(realH/2*3)
     newscreen.geometry("{0}x{1}".format(realW, realH))
     newscreen.resizable(False, False)
-    newscreen.iconphoto(False, tk.PhotoImage(file='gui\\newicon.png'))
+    newscreen.iconphoto(True, tk.PhotoImage(file='gui\\icon.png'))
     
     canvasn = tk.Canvas(newscreen, width=realW, height=realH)
 
@@ -64,5 +76,7 @@ def create(win):
 
     SaveInfo = tk.Button(newscreen, text="Create!", bg="white", fg="red", relief='flat', command=lambda:checkinfo(newscreen, realW, realH, in_name.get(), in_word.get(), in_word2.get()))
     SaveInfo.place(x=int(realW*0.81), y=int(realH*0.82))
+    reloads = tk.Button(newscreen, text="Restart", bg="white", fg="red", relief="flat", command=lambda:cancellation(newscreen))
+    reloads.place(x=int(realW*0.07), y=int(realH*0.82))
 
     newscreen.mainloop()
