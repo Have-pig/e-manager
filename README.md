@@ -16,3 +16,5 @@
 - after cleaning
 - input "{}" (yes, empty
 - and save :)
+
+- The contents in the "used" folder can be deleted
