@@ -58,20 +58,27 @@ def use(win, x, y):
     mainapp.title("e_manager")
     mainapp.resizable(False, False)
     mainapp.iconphoto(True, tk.PhotoImage(file="gui\\icon.png"))
+
     global canvasn
     canvasn = tk.Canvas(mainapp, bg="white", width=x, height=y)
+
     bgpath = dealmaingui(x, y)
     bg = tk.PhotoImage(file=bgpath)
     canvasn.create_image(int(x*0.5), int(y*0.5), anchor="center", image=bg)
+
     hellopath = dealhellopic(x, y)
     hp = tk.PhotoImage(file=hellopath)
     global hello
     hello = canvasn.create_image(int(y/16*3), 0, anchor="nw", image=hp)
+
     headphotopath = dealheadimage(y)
     headp = tk.PhotoImage(file=headphotopath)
     canvasn.create_image(int(y/16*0.45), int(y/16*0.45), anchor="nw", image=headp)
+
     canvasn.pack()
+
     glovar.hellos = True
+
     next(mainapp, y, x)
 
     mainapp.mainloop()

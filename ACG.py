@@ -9,13 +9,19 @@ import TOOL
 def acg(win, y, x):
     if glovar.hellos:
         mainusegui.canvasn.delete(mainusegui.hello)
+        glovar.hellos = False
     else:
         if glovar.domaintype == "ACCPASS":
-            pass
+            ACCPASS.DelAccount.destroy()
+            ACCPASS.CancelLation.destroy()
+            ACCPASS.ResetPassword.destroy()
         elif glovar.domaintype == "TOOL":
             pass
         elif glovar.domaintype == "SETTING":
             pass
 
+    global searches
     searches = tk.Entry(win, bg="white", width=int((x/25)), bd=1)
     searches.place(x=int(y*3.5/16), y=int(y*0.0625))
+
+    glovar.domaintype = "ACG"

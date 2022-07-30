@@ -58,6 +58,6 @@ def next(win, ys, xs):
     SETTING.bind("<ButtonRelease-1>", settingg.next)
 
     ACG.place(x=0, y=int(ys/16*3))
-    ACCPASS.place(x=0, y=int(ys/16*3+ys/7.9))
-    TOOL.place(x=0, y=int(int(ys/16*3+ys*2/7.9)))
-    SETTING.place(x=0, y=int(int(ys/16*3+ys*3/7.9)))
+    ACCPASS.place(x=0, y=int(ys/16*3+ys/8))
+    TOOL.place(x=0, y=int(int(ys/16*3+ys*2/8)))
+    SETTING.place(x=0, y=int(int(ys/16*3+ys*3/8)))
