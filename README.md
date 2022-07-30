@@ -7,6 +7,8 @@
 - by tkinter
 - by py 3.10.5
 - by datetime
+- by sys
+- by os
 
 **!!=======!!=======!!**
 - if you want to clean up the "userinfo.json"
