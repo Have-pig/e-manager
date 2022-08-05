@@ -1,8 +1,6 @@
 import tkinter as tk
 import dealPic
-from win32api import GetSystemMetrics
 import saveuserinfojson
-from rrreeessstttaaarrrtttt import cancellation
 import json
 
 
@@ -15,7 +13,7 @@ def noemptyname(win, x, y):
     warnname.place(x=int(x*0.37), y=int((y*0.34)))
 
 def done(win,x,y):
-    donenotice = tk.Label(win, bg="white", text="Saved! Restart to log in", fg="green")
+    donenotice = tk.Label(win, bg="white", text="Saved! Close to log in", fg="green")
     donenotice.place(x=int(x*0.46), y=int(y*0.84))
 
 def noemptypass(win, x, y):
@@ -44,14 +42,11 @@ def checkinfo(win, x, y, username, pass1, pass2):
     else:
         warn(win, x, y)
 
-def create(win):
-
-    win.destroy()
-
-    newscreen = tk.Tk()
+def create():
+    newscreen = tk.Toplevel()
     newscreen.title("Welcome!")
 
-    height = int(int(GetSystemMetrics(1))*0.6)
+    height = int(newscreen.winfo_screenheight()*0.6)
     realH = int(height*0.5)
     realW = int(realH/2*3)
     newscreen.geometry("{0}x{1}".format(realW, realH))
@@ -76,7 +71,5 @@ def create(win):
 
     SaveInfo = tk.Button(newscreen, text="Create!", bg="white", fg="red", relief='flat', command=lambda:checkinfo(newscreen, realW, realH, in_name.get(), in_word.get(), in_word2.get()))
     SaveInfo.place(x=int(realW*0.81), y=int(realH*0.82))
-    reloads = tk.Button(newscreen, text="Restart", bg="white", fg="red", relief="flat", command=lambda:cancellation(newscreen))
-    reloads.place(x=int(realW*0.07), y=int(realH*0.82))
 
     newscreen.mainloop()

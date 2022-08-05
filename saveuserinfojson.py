@@ -5,7 +5,7 @@ import hbdalfhb665g
 
 def saveinfo(username, password):
 
-    thistype = randint(0,2)
+    thistype = randint(0, 2)
     if thistype == 0:
         dealpassword = hbdalfhb665g.adadasdg(password)
     elif thistype == 1:

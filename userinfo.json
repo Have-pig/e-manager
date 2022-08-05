@@ -1,6 +1,18 @@
 {
-    "user11": {
-        "password": "11",
-        "type": 1
+    "user1": {
+        "password": "aa",
+        "type": 2
+    },
+    "user32": {
+        "password": "32",
+        "type": 0
+    },
+    "user23": {
+        "password": "32",
+        "type": 2
+    },
+    "user54": {
+        "password": "45",
+        "type": 2
     }
 }

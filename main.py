@@ -35,7 +35,7 @@ def start():
     in_word.place(x=int(width*0.442), y=int(height*0.519))
 
     enterd = tk.Button(entrance, text="    Go!    ", bg="white", fg="red", relief='flat', command=lambda:check(entrance, width, height, in_name.get(), in_word.get()))
-    signup = tk.Button(entrance, text="A new account?", bg="white", fg="red", relief='flat', command=lambda:createaccount.create(entrance))
+    signup = tk.Button(entrance, text="A new account?", bg="white", fg="red", relief='flat', command=createaccount.create)
 
     enterd.place(x=int(width*0.618), y=int(height*0.615))
     signup.place(x=int(width*0.32), y=int(height*0.615))

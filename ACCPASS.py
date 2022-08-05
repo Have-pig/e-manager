@@ -13,18 +13,22 @@ def accpass(win, y, x):
     if glovar.hellos:
         mainusegui.canvasn.delete(mainusegui.hello)
         glovar.hellos = False
+
     else:
         if glovar.domaintype == "ACG":
             ACG.searches.destroy()
+
         elif glovar.domaintype == "TOOL":
-            pass
+            TOOL.la.destroy()
+
         elif glovar.domaintype == "SETTING":
-            pass
+            SETTING.la.destroy()
+            
 
     global ResetPassword
     global DelAccount
     global CancelLation
-    ResetPassword = tk.Button(win, text="Reset password", bg="white", bd=1, command=lambda:ResetPass(win, x, y))
+    ResetPassword = tk.Button(win, text="Reset password", bg="white", bd=1, command=lambda:ResetPass(x, y))
     DelAccount = tk.Button(win, text="Delete account", bg="white",  bd=1, command=lambda:DelPass(win, x, y))
     CancelLation = tk.Button(win, text="Cancellation", bg="white", bd=1, command=lambda:cancellation(win))
 

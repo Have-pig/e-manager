@@ -9,11 +9,22 @@ import TOOL
 def setting(win, y, x):
     if glovar.hellos:
         mainusegui.canvasn.delete(mainusegui.hello)
+        glovar.hellos = False
+
     else:
         if glovar.domaintype == "ACG":
-            pass
-        elif glovar.domaintype == "TOOL":
-            pass
-        elif glovar.domaintype == "ACCPASS":
-            pass
+            ACG.searches.destroy()
 
+        elif glovar.domaintype == "TOOL":
+            TOOL.la.destroy()
+            
+        elif glovar.domaintype == "ACCPASS":
+            ACCPASS.DelAccount.destroy()
+            ACCPASS.CancelLation.destroy()
+            ACCPASS.ResetPassword.destroy()
+
+    global la
+    la = tk.Label(win, text="Please wait", fg="blue", bg="white", font=("宋体", 13))
+    la.place(x=int(y*3.5/16), y=int(y*0.0625))
+
+    glovar.domaintype = "SETTING"

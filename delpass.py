@@ -1,6 +1,4 @@
 import tkinter as tk
-from sys import executable, exit, argv
-from os import execl
 import json
 import glovar
 from rrreeessstttaaarrrtttt import cancellation
@@ -20,6 +18,7 @@ def DelPass(win, x, y):
     warn.title("Succeed!")
     warn.iconphoto(True, tk.PhotoImage(file="gui\\icon.png"))
     warn.geometry("{0}x{1}".format(int(x*0.4), int(y*0.4)))
+    warn.resizable(False, False)
 
     titles = tk.Label(warn, text="Succeed!\nNow you can click the button to restart!", fg="blue", font=("宋体", 13))
     titles.place(x=int(x*0.023), y=int(y*0.12))
