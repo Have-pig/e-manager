@@ -1,14 +1,15 @@
 # e-manager
 **to manage your own imformation**
 
-- by pywin32
-- by pillow
-- by json
+- use 3.10.5
+
+- by pillow： Image
+- by json: load(), dump()
 - by tkinter
-- by py 3.10.5
-- by datetime
-- by sys
-- by os
+- by datetime: datetime
+- by sys: executable, exit(), argv
+- by os: execl(), getcwd()
+- by random: randint()
 
 **!!=======!!=======!!**
 - if you want to clean up the "userinfo.json"
