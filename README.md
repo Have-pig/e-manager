@@ -3,12 +3,12 @@
 
 - use 3.10.5
 
-- by pillow： Image
+- by pillow：Image
 - by json: load(), dump()
 - by tkinter
 - by datetime: datetime
 - by sys: executable, exit(), argv
-- by os: execl(), getcwd()
+- by os: execl(), getcwd() makedirs() path
 - by random: randint()
 
 **!!=======!!=======!!**
