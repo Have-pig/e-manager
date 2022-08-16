@@ -1,4 +1,5 @@
 # e-manager
+============
 **to manage your own imformation**
 
 - use 3.10.5
@@ -12,6 +13,7 @@
 - by random: randint()
 
 **!!=======!!=======!!**
+_________________________
 - if you want to clean up the "userinfo.json"
 - to make the program run correctely
 - after cleaning
@@ -20,6 +22,6 @@
 
 - The contents in the "used" folder can be deleted
 
-what`s more
-  use "TOOL" and tkinter.Button\n
+### what`s more
+  use "TOOL" and tkinter.Button <br>
   you can add something that you want to use
