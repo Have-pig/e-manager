@@ -1,6 +1,6 @@
 # e-manager
 **to manage your own imformation**
-
+[![OSCS Status](https://www.oscs1024.com/platform/badge/Have-pig/e-manager.svg?size=small)](https://www.oscs1024.com/project/Have-pig/e-manager?ref=badge_small)
 - use 3.10.5
 
 - by pillow：Image
