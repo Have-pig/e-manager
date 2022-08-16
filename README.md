@@ -8,7 +8,7 @@
 - by tkinter
 - by datetime: datetime
 - by sys: executable, exit(), argv
-- by os: execl(), getcwd(), makedirs(), os.path, rmdir() 
+- by os: execl(), getcwd(), makedirs(), os.path, rmdir(), remove()
 - by random: randint()
 
 **!!=======!!=======!!**
