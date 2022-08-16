@@ -21,5 +21,5 @@
 - The contents in the "used" folder can be deleted
 
 what`s more
-  use "TOOL" and tkinter.Button
+  use "TOOL" and tkinter.Button\n
   you can add something that you want to use
