@@ -1,6 +1,8 @@
 # e-manager
 **to manage your own imformation**
 
+[![OSCS Status](https://www.oscs1024.com/platform/badge/Have-pig/e-manager.svg?size=small)](https://www.oscs1024.com/project/Have-pig/e-manager?ref=badge_small)
+
 - use 3.10.5
 - by pillow：Image
 - by json: load(), dump()
@@ -22,5 +24,3 @@ _________________________
 ### what`s more
   use "TOOL" and tkinter.Button <br>
   you can add something that you want to use
-[![OSCS Status](https://www.oscs1024.com/platform/badge/Have-pig/e-manager.svg?size=large)](https://www.oscs1024.com/project/Have-pig/e-manager?ref=badge_large)
-[![OSCS Status](https://www.oscs1024.com/platform/badge/Have-pig/e-manager.svg?size=small)](https://www.oscs1024.com/project/Have-pig/e-manager?ref=badge_small)
