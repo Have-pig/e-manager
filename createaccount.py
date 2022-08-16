@@ -49,7 +49,9 @@ def create():
     height = int(newscreen.winfo_screenheight()*0.6)
     realH = int(height*0.5)
     realW = int(realH/2*3)
-    newscreen.geometry("{0}x{1}".format(realW, realH))
+    left = int((newscreen.winfo_screenwidth()-realW)/2)
+    top = int((newscreen.winfo_screenheight()-realH)/2.15)
+    newscreen.geometry(f"{realW}x{realH}+{left}+{top}")
     newscreen.resizable(False, False)
     newscreen.iconphoto(True, tk.PhotoImage(file='gui\\icon.png'))
     

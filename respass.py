@@ -37,11 +37,13 @@ def ResetPass(x, y):
     resset.resizable(False, False)
     resset.iconphoto(True, tk.PhotoImage(file="gui\\icon.png"))
 
-    resset.geometry("{0}x{1}".format(int(x*0.4), int(y*0.4)))
+    left = int((resset.winfo_screenwidth()-x)/2)
+    top = int((resset.winfo_screenheight()-y)/2.5)
+    resset.geometry(f"{x}x{y}+{left}+{top}")
 
-    innewpass = tk.Entry(resset, bg="white", fg="green", width=int(x/29), bd=1)
-    save = tk.Button(resset, bg="white", fg="red", text="   Save   ", bd=1, command=lambda:saveinfo(resset, innewpass.get(), int(x*0.4), int(y*0.4)))
-    innewpass.place(x=int(x*0.2), y=int(y*0.12), anchor="center")
-    save.place(anchor="center", x=int(x*0.2), y=int(y*0.24))
+    innewpass = tk.Entry(resset, bg="white", fg="green", width=int(x/11.6), bd=1)
+    save = tk.Button(resset, bg="white", fg="red", text="   Save   ", bd=1, command=lambda:saveinfo(resset, innewpass.get(), x, y))
+    innewpass.place(x=int(x*0.5), y=int(y*0.3), anchor="center")
+    save.place(anchor="center", x=int(x*0.5), y=int(y*0.6))
 
     resset.mainloop()

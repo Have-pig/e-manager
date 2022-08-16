@@ -4,6 +4,8 @@ from os import getcwd
 from datetime import datetime
 from mainapp import next
 import glovar
+import os.path as paths
+from os import makedirs
 
 
 def dealmaingui(x, y):
@@ -53,8 +55,19 @@ def dealheadimage(y):
 def use(win, x, y):
     win.destroy()
 
+    userpath = "userACG\\"+glovar.loginacc
+    if not(paths.exists(userpath)):
+        makedirs(userpath)
+
+    userfile = "userACG\\"+glovar.loginacc+"\\acginfo.json"
+    if not(paths.isfile(userfile)):
+        f = open(userfile, "x")
+        f.closed
+
     mainapp = tk.Tk()
-    mainapp.geometry("{0}x{1}".format(x, y))
+    left = int((mainapp.winfo_screenwidth()-x)/2)
+    top = int((mainapp.winfo_screenheight()-y)/2.5)
+    mainapp.geometry(f"{x}x{y}+{left}+{top}")
     mainapp.title("e_manager")
     mainapp.resizable(False, False)
     mainapp.iconphoto(True, tk.PhotoImage(file="gui\\icon.png"))

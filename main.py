@@ -13,7 +13,9 @@ def start():
     height = int(entrance.winfo_screenheight()*0.6)
     entrance.resizable(False, False)
 
-    entrance.geometry("{0}x{1}".format(width, height))
+    left = int((entrance.winfo_screenwidth()-width)/2)
+    top = int((entrance.winfo_screenheight()-height)/2.5)
+    entrance.geometry(f"{width}x{height}+{left}+{top}")
     entrance.iconphoto(True, tk.PhotoImage(file='gui\\icon.png'))
 
     bgfile = dealbgpic.getimage(width, height)

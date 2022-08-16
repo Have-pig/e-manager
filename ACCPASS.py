@@ -17,6 +17,8 @@ def accpass(win, y, x):
     else:
         if glovar.domaintype == "ACG":
             ACG.searches.destroy()
+            ACG.next.destroy()
+            ACG.addtion.destroy()
 
         elif glovar.domaintype == "TOOL":
             TOOL.la.destroy()
@@ -28,8 +30,10 @@ def accpass(win, y, x):
     global ResetPassword
     global DelAccount
     global CancelLation
-    ResetPassword = tk.Button(win, text="Reset password", bg="white", bd=1, command=lambda:ResetPass(x, y))
-    DelAccount = tk.Button(win, text="Delete account", bg="white",  bd=1, command=lambda:DelPass(win, x, y))
+    isx = int(x*0.4)
+    isy= int(y*0.4)
+    ResetPassword = tk.Button(win, text="Reset password", bg="white", bd=1, command=lambda:ResetPass(isx, isy))
+    DelAccount = tk.Button(win, text="Delete account", bg="white",  bd=1, command=lambda:DelPass(win, isx, isy))
     CancelLation = tk.Button(win, text="Cancellation", bg="white", bd=1, command=lambda:cancellation(win))
 
     ResetPassword.place(x=int(y*3.5/16), y=int(y*0.0325))

@@ -14,6 +14,8 @@ def setting(win, y, x):
     else:
         if glovar.domaintype == "ACG":
             ACG.searches.destroy()
+            ACG.next.destroy()
+            ACG.addtion.destroy()
 
         elif glovar.domaintype == "TOOL":
             TOOL.la.destroy()

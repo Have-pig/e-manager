@@ -7,6 +7,8 @@ import TOOL
 
 
 def acg(win, y, x):
+    glovar.acgbe = False
+
     if glovar.hellos:
         mainusegui.canvasn.delete(mainusegui.hello)
         glovar.hellos = False
@@ -25,6 +27,14 @@ def acg(win, y, x):
 
     global searches
     searches = tk.Entry(win, bg="white", width=int((x/25)), bd=1)
-    searches.place(x=int(y*3.5/16), y=int(y*0.0625))
+    searches.place(x=int(y*3.7/16), y=int(y*0.0625))
+
+    global next
+    next = tk.Button(win, bg="white", text="Search", fg="blue", bd=1)
+    next.place(x=int(x*0.43), y=int(y*0.054))
+
+    global addtion
+    addtion = tk.Button(win, bg="white", bd=1, text="Add", fg="blue")
+    addtion.place(x=int(x*0.5), y=int(y*0.054))
 
     glovar.domaintype = "ACG"
