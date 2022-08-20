@@ -16,6 +16,8 @@ def tool(win, y, x):
             ACG.searches.destroy()
             ACG.next.destroy()
             ACG.addtion.destroy()
+            ACG.emptyacg.destroy()
+            ACG.updatebut.destroy()
 
         elif glovar.domaintype == "ACCPASS":
             ACCPASS.DelAccount.destroy()

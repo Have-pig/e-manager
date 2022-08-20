@@ -3,9 +3,26 @@ import dealbgpic
 import dealPic
 import createaccount
 from enterd import check
+from os.path import isfile
+import json
 
 
 def start():
+    if not(isfile("userinfo.json")):
+        f = open("userinfo.json", "w")
+        f.write("{}")
+        f.close()
+    else:
+        with open("userinfo.json", "r") as fl:
+            fll = str(fl.read())
+            if fll[0] != "{":
+                rewrite = True
+            else:
+                rewrite = False
+        if rewrite:
+            with open("userinfo.json", "w") as f:
+                f.write("{}")
+
     entrance = tk.Tk()
     entrance.title("Hello!")
 

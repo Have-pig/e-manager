@@ -61,8 +61,22 @@ def use(win, x, y):
 
     userfile = "userACG\\"+glovar.loginacc+"\\acginfo.json"
     if not(paths.isfile(userfile)):
-        f = open(userfile, "x")
-        f.closed
+        f = open(userfile, "w")
+        f.write("{}")
+        f.close()
+        glovar.firsttimetouse = True
+    else:
+        with open(userfile, "r") as f:
+            fl = str(f.read())
+            if fl[0] != "{":
+                rewrite = True
+                glovar.firsttimetouse = True
+            else:
+                rewrite = False
+                glovar.firsttimetouse = False
+        if rewrite:
+            with open(userfile, "w") as fl:
+                fl.write("{}")
 
     mainapp = tk.Tk()
     left = int((mainapp.winfo_screenwidth()-x)/2)

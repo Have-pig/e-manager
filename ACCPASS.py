@@ -19,6 +19,8 @@ def accpass(win, y, x):
             ACG.searches.destroy()
             ACG.next.destroy()
             ACG.addtion.destroy()
+            ACG.emptyacg.destroy()
+            ACG.updatebut.destroy()
 
         elif glovar.domaintype == "TOOL":
             TOOL.la.destroy()
