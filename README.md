@@ -12,12 +12,6 @@
 - by os: execl(), getcwd(), makedirs(), os.path, rmdir(), remove()
 - by random: randint()
 _________________________
-**!!=======!!=======!!**
-- if you want to clean up the "userinfo.json"
-- to make the program run correctely
-- after cleaning
-- input "{}" (yes, empty
-- and save :)
 
 - The contents in the "used" folder can be deleted
 
