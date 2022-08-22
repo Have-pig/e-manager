@@ -5,16 +5,14 @@ import ACCPASS
 import SETTING
 import TOOL
 import json
+from addacg import add
 
 
 def acg(win, y, x):
-    glovar.acgbe = False
-
-
     if glovar.hellos:
         mainusegui.canvasn.delete(mainusegui.hello)
         glovar.hellos = False
-        
+
     else:
         if glovar.domaintype == "ACCPASS":
             ACCPASS.DelAccount.destroy()
@@ -36,7 +34,9 @@ def acg(win, y, x):
     next.place(x=int(x*0.43), y=int(y*0.054))
 
     global addtion
-    addtion = tk.Button(win, bg="white", bd=1, text="Add", fg="blue")
+    ix = int(x*0.4)
+    iy = int(y*0.4)
+    addtion = tk.Button(win, bg="white", bd=1, text="Add", fg="blue", command=lambda:add(win, ix, iy))
     addtion.place(x=int(x*0.5), y=int(y*0.054))
 
     global updatebut
@@ -44,10 +44,10 @@ def acg(win, y, x):
     updatebut.place(x=int(x*0.55), y=int(y*0.054))
 
     global emptyacg
-    emptyacg = tk.Label(win, bg="white", bd=0, text="You haven't added animation yet!", fg="yellow", font=("宋体", 13))
+    emptyacg = tk.Label(win, bg="white", bd=0, text="You haven't added animation yet!", fg="orange", font=("宋体", 13))
 
     if glovar.firsttimetouse:
-        emptyacg.place(x=int(x*0.5), y=int(y*0.5))
+        emptyacg.place(x=int(x*0.4), y=int(y*0.5))
     else:
         pass
 

@@ -3,11 +3,13 @@ import dealbgpic
 import dealPic
 import createaccount
 from enterd import check
-from os.path import isfile
-import json
+from os.path import isfile, exists
+from os import makedirs
 
 
 def start():
+    if not(exists("used")):
+        makedirs("used")
     if not(isfile("userinfo.json")):
         f = open("userinfo.json", "w")
         f.write("{}")
@@ -15,7 +17,7 @@ def start():
     else:
         with open("userinfo.json", "r") as fl:
             fll = str(fl.read())
-            if fll[0] != "{":
+            if (fll[0] != "{") or (fll[-1] != "}"):
                 rewrite = True
             else:
                 rewrite = False
