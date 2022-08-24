@@ -11,9 +11,10 @@
 - by sys: executable, exit(), argv
 - by os: execl(), getcwd(), makedirs(), os.path, rmdir(), remove()
 - by random: randint()
-_________________________
 
 - The contents in the "used" folder can be deleted
+
+_________________________
 
 ### what`s more
   use "TOOL" and tkinter.Button <br>
