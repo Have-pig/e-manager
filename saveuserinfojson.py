@@ -18,4 +18,4 @@ def saveinfo(username, password):
 
     with open("userinfo.json", "w") as f:
         jsons["user{0}".format(username)] = {"password":dealpassword, "type":thistype}
-        json.dump(jsons, fp=f, indent=4)
+        json.dump(jsons, fp=f, indent=4, ensure_ascii=False)

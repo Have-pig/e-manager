@@ -68,15 +68,15 @@ def use(win, x, y):
     else:
         with open(userfile, "r") as f:
             fl = str(f.read())
-            if (fl[0] != "{") or (fl[-1] != "}"):
+            if len(fl) <= 2:
+                glovar.firsttimetouse = True
+                rewrite = True
+            elif (fl[0] != "{") or (fl[-1] != "}"):
                 rewrite = True
                 glovar.firsttimetouse = True
             else:
                 rewrite = False
-                if len(fl) == 2:
-                    glovar.firsttimetouse = True
-                else:
-                    glovar.firsttimetouse = False
+                glovar.firsttimetouse = False
         if rewrite:
             with open(userfile, "w") as fl:
                 fl.write("{}")

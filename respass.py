@@ -1,5 +1,4 @@
 import tkinter as tk
-from rrreeessstttaaarrrtttt import cancellation
 import json
 import hbdalfhb665g
 import glovar
@@ -24,7 +23,7 @@ def saveinfo(win, password, x, y):
 
         with open("userinfo.json", "w") as f:
             jsons["user{0}".format(glovar.loginacc)] = {"password":dealpassword, "type":thistype}
-            json.dump(jsons, fp=f, indent=4)
+            json.dump(jsons, fp=f, indent=4, ensure_ascii=False)
 
             title = tk.Label(win, bg="white", fg="green", text="Succeed!")
             title.place(anchor="center", x=int(x*0.5), y=int(y*0.85))

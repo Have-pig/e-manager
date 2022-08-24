@@ -49,6 +49,26 @@ def acg(win, y, x):
     if glovar.firsttimetouse:
         emptyacg.place(x=int(x*0.4), y=int(y*0.5))
     else:
-        pass
+        with open("userACG\\"+glovar.loginacc+"\\acginfo.json", "r") as f:
+            jsons = json.load(f)
+
+        alls = jsons.values()
+
+        groups = 1
+        times = 0
+        re = []
+        for i in alls:
+            re.append(i)
+            times += 1
+            if times == 7:
+                exec(f"Group{groups} = re[:]")
+                times = 0
+                groups += 1
+                re = []
+            elif list(alls).index(i) == len(alls)-1:
+                exec(f"Group{groups} = re[:]")
+
+        
+
 
     glovar.domaintype = "ACG"

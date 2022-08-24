@@ -17,7 +17,9 @@ def start():
     else:
         with open("userinfo.json", "r") as fl:
             fll = str(fl.read())
-            if (fll[0] != "{") or (fll[-1] != "}"):
+            if len(fll) < 2:
+                rewrite = True
+            elif (fll[0] != "{") or (fll[-1] != "}"):
                 rewrite = True
             else:
                 rewrite = False
