@@ -18,3 +18,8 @@ _________________________
 ### what`s more
   use "TOOL" and tkinter.Button <br>
   you can add something that you want to use
+_________________________
+
+## Abou background of login interface
+
+You can store pictures in "picture"
