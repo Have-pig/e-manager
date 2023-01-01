@@ -7,24 +7,33 @@ import json
 def warn(win, x, y):
     warninfo = tk.Label(win, bg="white", text="The passwords are different", fg="orange")
     warninfo.place(x=int(x*0.05), y=int(y*0.84))
+    dellist.append(warninfo)
 
 def noemptyname(win, x, y):
     warnname = tk.Label(win, bg="white", text='The "name" shouldn`t be empty', fg="orange")
     warnname.place(x=int(x*0.37), y=int((y*0.34)))
+    dellist.append(warnname)
 
 def done(win,x,y):
     donenotice = tk.Label(win, bg="white", text="Saved! Close to log in", fg="green")
     donenotice.place(x=int(x*0.46), y=int(y*0.84))
+    dellist.append(donenotice)
 
 def noemptypass(win, x, y):
     warnpass = tk.Label(win, bg="white", text='The "password" shouldn`t be empty', fg="orange")
     warnpass.place(x=int(x*0.37), y=int(y*0.56))
+    dellist.append(warnpass)
 
 def acchasbeen(win, x, y):
     warnexistence = tk.Label(win, bg="white", text="The account has been created", fg="orange")
     warnexistence.place(x=int(x*0.291), y=int(y*0.82))
+    dellist.append(warnexistence)
 
 def checkinfo(win, x, y, username, pass1, pass2):
+    if dellist:
+        for i in dellist:
+            i.destroy()
+
     with open("userinfo.json") as f:
         jsons = json.load(f)
         userlist = jsons.keys()
@@ -43,6 +52,8 @@ def checkinfo(win, x, y, username, pass1, pass2):
         warn(win, x, y)
 
 def create():
+    global dellist
+    dellist = []
     newscreen = tk.Toplevel()
     newscreen.title("Welcome!")
 

@@ -31,4 +31,6 @@ def setting(win, y, x):
     la = tk.Label(win, text="Please wait", fg="blue", bg="white", font=("宋体", 13))
     la.place(x=int(y*3.5/16), y=int(y*0.0625))
 
+    directlogin = tk.Button(win, text="")
+
     glovar.domaintype = "SETTING"

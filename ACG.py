@@ -57,18 +57,26 @@ def acg(win, y, x):
         groups = 1
         times = 0
         re = []
+        Grouplist = []
         for i in alls:
             re.append(i)
             times += 1
             if times == 7:
+                exec(f"global Group{groups}")
                 exec(f"Group{groups} = re[:]")
+                exec(f"Grouplist.append(Group{groups})")
                 times = 0
                 groups += 1
                 re = []
             elif list(alls).index(i) == len(alls)-1:
+                exec(f"global Group{groups}")
                 exec(f"Group{groups} = re[:]")
-
-        
+                exec(f"Grouplist.append(Group{groups})")
+ 
+        page = 1
+        global lI
+        # for i in Grouplist:
+        #     for j in i:
 
 
     glovar.domaintype = "ACG"

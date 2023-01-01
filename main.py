@@ -10,6 +10,10 @@ from os import makedirs
 def start():
     if not(exists("used")):
         makedirs("used")
+    if not(isfile("option.json")):
+        f = open("option.json", "w")
+        f.write("{}")
+        f.close()
     if not(isfile("userinfo.json")):
         f = open("userinfo.json", "w")
         f.write("{}")
