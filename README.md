@@ -1,6 +1,8 @@
 # e-manager
 **to manage your own imformation**
-##Died,because of the updating of python and tkinter
+
+
+Died,because of the updating of python and tkinter
 
 [![OSCS Status](https://www.oscs1024.com/platform/badge/Have-pig/e-manager.svg?size=small)](https://www.oscs1024.com/project/Have-pig/e-manager?ref=badge_small)
 
